@@ -1,0 +1,18 @@
+﻿@using Vidly.Models
+@{
+    ViewBag.Title = "Customer";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+<table Class="table table-bordered table-hover ">
+    <thead> Customer</thead>
+    @foreach(Customer c in Model)
+    {
+        <li>
+            @Html.ActionLink(c.Name,"Info","Customers",c,c.Id)
+        </li>
+    }
+
+</table>
